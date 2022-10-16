@@ -1,0 +1,24 @@
+{
+  "name": "help",
+  "version": "1.0.0",
+  "description": "",
+  "main": "first_task.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dashazxcvbnm/first_s.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dashazxcvbnm/first_s/issues"
+  },
+  "homepage": "https://github.com/Dashazxcvbnm/first_s#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
