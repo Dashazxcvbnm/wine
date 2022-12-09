@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.section-first {
+    background: linear-gradient(180deg, rgb(40, 40, 40) 0%, rgba(40, 40, 40, 0) 100%), url(./Графика/section-first-fon.jpg), rgb(237, 237, 237);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 20%;
+}
+
+.section-first__header {
+
+}
+
+.section-first__header-adds {
+
+}
+
+.section-first__header-info {
+
+}
+
+.section-first__menu {
+
+}
+
+.section-first__menu-catalog {
+
+}
+
+.section-first__menu-delivery {
+
+}
+
+.section-first__menu-collections {
+
+}
+
+.section-first__menu-communications {
+
+}
+
+.section-first__button-wine-map {
+
+} 
+
+.section-first__button-degustation {
+
+}
+
+.section-second {
+    /* border: 3px solid red; */
+    background: rgb(40, 40, 40);
+    height: 20%;
+}
+
+.section-third {
+    /* border: 3px solid red; */
+    background: rgb(230, 227, 196);
+    height: 20%;
+}
+
+.section-fourth {
+    /* border: 3px solid red; */
+    background: rgb(40, 40, 40);
+    height: 20%;
+}
+
+.footer {
+    /* border: 3px solid red; */
+    background: rgb(153, 132, 49);
+    height: 20%;
+}
