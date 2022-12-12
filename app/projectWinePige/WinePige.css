@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+}
+
+.content-container {
+    width: 1100px;
+    margin: auto;
+    text-align: center;
+    height: 100vh;
+}
+
+.section--first{
+    background: url(./Image/section-first-fon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    display: flex;
+}
+
+.section__header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+.section__menu {
+    font-size: 14px;
+    height: 46px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.section__menu-item {
+    list-style: none; 
+    padding-left: 0;
+    display: flex;
+    border-top: 1px solid rgb(255, 255, 255);
+    align-items: center;
+}
+
+.section__menu-item__left-block {
+    flex-basis: 25%;
+}
+
+.section__menu-item__left-center-block {
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    height: 46px;
+    flex-basis: 25%;
+}
+
+.section__menu-item__right-center-block {
+    border-right: 1px solid rgb(255, 255, 255);
+    height: 46px;
+    flex-basis: 25%;
+}
+
+.section__menu-item__right-block {
+    flex-basis: 25%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 60%;
+    padding-bottom: 150px;
+}
+
+.section__button {
+    background: rgb(153, 132, 49);
+    color: rgb(255, 255, 255);
+    padding: 15px 30px;
+    border: none;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    margin: 15px;
+}
+
+.section--second {
+    background: rgb(40, 40, 40);
+    border: 3px solid rgb(196, 196, 196);
+}
+
+.section--third {
+    background: rgb(230, 227, 196);
+}
+
+.section--fourth {
+    background: rgb(40, 40, 40);
+}
+
+.footer {
+    background: rgb(153, 132, 49);
+}

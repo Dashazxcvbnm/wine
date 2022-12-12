@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="./winePige.css" rel="stylesheet">
-        <script scr="./winePige.js"></script>
+        <link href="./WinePige.css" rel="stylesheet">
+        <script scr="./WinePige.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, height:device-height, initial-scale=1.0">
         <title>Wine</title>
     </head>
     <body>
-    <div class="content-container">
-        <section class="section-first">
-         <header class="section-first__header">
-            <div class="section-first__header-adds">
+        <section class="section section--first">
+            <div class="content-container">
+         <header class="section__header">
+            <div class="section__header-adds">
                 Новокузнечный переулок 4/1
             </div>
-            <div class="section-first__header-info">
+            <div class="section__header-info">
                 8 (812) 123-45-67
             </div>
          </header>
-         <nav class="section-first__menu">
-            <div class="section-first__menu-catalog">
-                Каталог
-            </div >
-            <div class="section-first__menu-delivery">
-                Доставка
-            </div>
-            <div class="section-first__menu-collections">
-                Коллекции
-            </div>
-            <div class="section-first__menu-communications">
-                Контакты
-            </div>
+         <nav class="section__menu">
+         <ul class="section__menu-item">
+            <li class="section__menu-item__left-block">Каталог</li>
+            <li class="section__menu-item__left-center-block">Доставка</li>
+            <li class="section__menu-item__right-center-block">Коллекции</li>
+            <li class="section__menu-item__right-block">Контакты</li>
+         </ul>
          </nav>
-         <div class="section-first__button-wine-map">
+         <div class="button">
+         <button class="section__button">
             винная карта
-         </div>
-         <div class="section-first__button-degustation">
+         </button>
+         <button class="section__button">
             дегустация
+         </button>
+        </div>
          </div>
         </section>
 
-        <section class="section-second">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="section section--second">
+            <div class="content-container ">
             <div>
                 Див контент внутри бордера
             </div>
@@ -53,20 +67,25 @@
             <div>
                 Картинка
             </div>
+            </div>
         </section>
 
-        <section class="section-third">
+        <section class="section section--third">
+            <div class="content-container">
             <div>
                 Левый блок. Контент блоки + кнопка
             </div>
             <div>
                 Правый блок. Тут будет коллекция картинок
             </div>
+            </div>
         </section>
 
-        <section class="section-fourth">
+        <section class="section section--fourth">
+            <div class="content-container">
             <div>
                 Див контент внутри бордера
+            </div>
             </div>
         </section>
 
@@ -78,8 +97,6 @@
                 Контактные данные
             </div>
         </footer>
-
-     </div>
 
     </body>
 </html>
