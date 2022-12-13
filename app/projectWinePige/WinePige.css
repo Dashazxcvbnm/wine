@@ -4,12 +4,15 @@ body {
 
 .content-container {
     width: 1100px;
-    margin: auto;
+    margin: 0 auto;
+}
+
+.section {
     text-align: center;
     height: 100vh;
 }
 
-.section--first{
+.section--first {
     background: url(./Image/section-first-fon.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,42 +28,35 @@ body {
     padding-bottom: 20px;
 }
 
-.section__menu {
+.menu-list {
     font-size: 14px;
     height: 46px;
-    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
-.section__menu-item {
+.menu-list__items {
     list-style: none; 
     padding-left: 0;
     display: flex;
     border-top: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
     align-items: center;
 }
 
-.section__menu-item__left-block {
+.menu-list__item {
     flex-basis: 25%;
+    padding: 23px;
 }
 
-.section__menu-item__left-center-block {
+.menu-list__item:nth-child(2) {
     border-left: 1px solid rgb(255, 255, 255);
     border-right: 1px solid rgb(255, 255, 255);
-    height: 46px;
-    flex-basis: 25%;
 }
 
-.section__menu-item__right-center-block {
+.menu-list__item:nth-child(3) {
     border-right: 1px solid rgb(255, 255, 255);
-    height: 46px;
-    flex-basis: 25%;
 }
 
-.section__menu-item__right-block {
-    flex-basis: 25%;
-}
-
-.button {
+.search-form {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -68,7 +64,7 @@ body {
     padding-bottom: 150px;
 }
 
-.section__button {
+.search-form__button {
     background: rgb(153, 132, 49);
     color: rgb(255, 255, 255);
     padding: 15px 30px;
@@ -80,9 +76,50 @@ body {
     margin: 15px;
 }
 
+.content-container__wrapper {
+    border: 3px solid rgb(196, 196, 196);
+    padding: 60px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-family: 'Playfair Display';
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+}
+
+.border-test {
+    width: 160px;
+    height: 0px;
+    margin: auto;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.section-text {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.section--second-text {
+    padding-left: 190px;
+    padding-right: 190px;
+}
+
+
 .section--second {
     background: rgb(40, 40, 40);
-    border: 3px solid rgb(196, 196, 196);
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    height: auto;
 }
 
 .section--third {
@@ -91,6 +128,7 @@ body {
 
 .section--fourth {
     background: rgb(40, 40, 40);
+    display: flex;
 }
 
 .footer {
