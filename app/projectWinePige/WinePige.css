@@ -32,7 +32,6 @@ body {
 .menu-list {
     font-size: 14px;
     height: 46px;
-    width: 1100px;
 }
 
 .menu-list__items {
@@ -66,7 +65,7 @@ body {
     padding-bottom: 150px;
 }
 
-.button-form {
+.button-position__form {
     background: rgb(153, 132, 49);
     color: rgb(255, 255, 255);
     padding: 15px 30px;
@@ -83,7 +82,6 @@ body {
     padding-top: 60px;
     margin-top: 100px;
     margin-bottom: 100px;
-    width: 1100px;
 }
 
 .section-title {
@@ -92,14 +90,20 @@ body {
     color: rgb(255, 255, 255);
 }
 
+.section--second-title {
+    width: 900px;
+    margin: 0 auto;
+}
+
 .border-line {
     width: 160px;
     margin: auto;
     border-top: 1px solid rgb(255, 255, 255);
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .section-text {
-    padding-top: 40px;
     padding-bottom: 50px;
     color: rgb(255, 255, 255);
     font-family: 'Montserrat';
@@ -108,8 +112,8 @@ body {
 }
 
 .section--second-text {
-    padding-left: 190px;
-    padding-right: 190px;
+    width: 733px;
+    margin: 0 auto;
 }
 
 .section-img {
@@ -135,7 +139,6 @@ body {
     margin-top: 80px;
     margin-bottom: 80px;
     display: flex;
-    width: 1100px;
 }
 
 .aside-content {
@@ -150,7 +153,8 @@ body {
 
 .button-form__section-third {
     margin-top: 15px;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
+    margin-left: 0;
 }
 
 .aside-content__under-img {
@@ -169,17 +173,13 @@ body {
     margin-left: 0;
 }
 
-.button-form__section-third {
-    margin-left: 0;
-    margin-top: 15px;
-}
-
 .section-third-text {
     margin-top: 15px;
     margin-bottom: 15px;
     font-family: 'Montserrat';
     font-size: 14px;
     color: rgb(40, 40, 40);
+    width: 445px;
 }
 
 .section-third-text:nth-child(1)  {
@@ -189,7 +189,54 @@ body {
 .section-third-text:nth-child(2)  {
     font-family: 'Playfair Display';
     font-size: 36px;
-    line-height: 54px;
+    line-height: 30px;
+}
+
+.section-third-text:nth-child(5) {
+    display: flex;
+}
+
+.text-list__items {
+    list-style: none;
+    padding-left: 0;
+}
+
+.text-list__item-left {
+    border-right: 1px solid rgb(40, 40, 40);
+    width: 75px;
+    padding-top: 31px;
+    padding-bottom: 26px;
+    text-align: center;
+}
+
+.text-list__item-right {
+    width: 370px;
+    height: 53px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+
+.text-list__item-left:nth-child(1) {
+    border-bottom: 1px solid rgb(40, 40, 40);
+}
+
+.text-list__item-left:nth-child(2) {
+    border-bottom: 1px solid rgb(40, 40, 40);
+}
+
+.text-list__item-right:nth-child(1) {
+    border-bottom: 1px solid rgb(40, 40, 40);
+}
+
+.text-list__item-right:nth-child(2) {
+    border-bottom: 1px solid rgb(40, 40, 40);
+}
+
+.subtitle-text {
+    font-family: 'Playfair Display';
+    font-size: 18px;
+    line-height: 27px;
 }
 
 .section--fourth {
@@ -198,8 +245,8 @@ body {
 }
 
 .section--fourth-text {
-    padding-left: 285px;
-    padding-right: 285px;
+    width: 539px;
+    margin: 0 auto;
 }
 
 .footer {
