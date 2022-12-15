@@ -57,7 +57,7 @@ body {
     border-right: 1px solid rgb(255, 255, 255);
 }
 
-.button-position {
+.controls {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -65,7 +65,7 @@ body {
     padding-bottom: 150px;
 }
 
-.button-position__form {
+.controls-button {
     background: rgb(153, 132, 49);
     color: rgb(255, 255, 255);
     padding: 15px 30px;
@@ -151,9 +151,8 @@ body {
     text-align: left;
 }
 
-.button-form__section-third {
+.controls-button__section-third {
     margin-top: 15px;
-    /* margin-bottom: 60px; */
     margin-left: 0;
 }
 
@@ -207,6 +206,7 @@ body {
     padding-top: 31px;
     padding-bottom: 26px;
     text-align: center;
+    border-bottom: 1px solid rgb(40, 40, 40);
 }
 
 .text-list__item-right {
@@ -215,22 +215,15 @@ body {
     padding-top: 10px;
     padding-bottom: 15px;
     padding-left: 30px;
-}
-
-.text-list__item-left:nth-child(1) {
     border-bottom: 1px solid rgb(40, 40, 40);
 }
 
-.text-list__item-left:nth-child(2) {
-    border-bottom: 1px solid rgb(40, 40, 40);
+.text-list__item-left:nth-child(3) {
+    border-bottom: none;
 }
 
-.text-list__item-right:nth-child(1) {
-    border-bottom: 1px solid rgb(40, 40, 40);
-}
-
-.text-list__item-right:nth-child(2) {
-    border-bottom: 1px solid rgb(40, 40, 40);
+.text-list__item-right:nth-child(3) {
+    border-bottom: none;
 }
 
 .subtitle-text {
