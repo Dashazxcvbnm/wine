@@ -84,7 +84,7 @@ body {
     margin-bottom: 100px;
 }
 
-.section-title {
+.section__title {
     font-family: 'Playfair Display';
     font-size: 36px;
     color: rgb(255, 255, 255);
@@ -230,6 +230,7 @@ body {
     font-family: 'Playfair Display';
     font-size: 18px;
     line-height: 27px;
+    font-weight: bolder;
 }
 
 .section--fourth {
@@ -251,19 +252,19 @@ body {
     background-color: rgb(40, 40, 40);;
 }
 
-.section-fourth-img:nth-child(2) {
+.section-fourth__img:nth-child(2) {
     position: absolute;
     left: -30px;
     top: 60px;
 }
 
-.section-fourth-img:nth-child(3) {
+.section-fourth__img:nth-child(3) {
     position: absolute;
     left: 903px;
     top: 64px;
 }
 
-.input-list__items {
+.forms-input {
     margin: 0 auto;
     padding-left: 0;
     width: 520px;
@@ -271,24 +272,30 @@ body {
     list-style: none;
 }
 
-.input-list__item {
+.form-input {
     flex-basis: 50%;
-    border-bottom: 1px solid #FFFFFF;
     margin-bottom: 40px;
     font-size: 13px;
     font-family: 'Montserrat';
     padding-bottom: 10px;
+    background-color: rgb(40, 40, 40);
+    color: rgb(255, 255, 255);
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(255, 255, 255);;
+    border-left: none;
+    width: 520px;
 }
 
-.input-list__item:nth-child(1) {
+.form-input:nth-child(1) {
     margin-right: 30px;
 }
 
-.input-name {
+.forms-input__wrapper{
     display: flex;
 }
 
-.input-items__controls-button {
+.button {
     margin-bottom: 85px;
     background: rgb(40, 40, 40);
     color: rgb(255, 255, 255);
@@ -307,15 +314,29 @@ body {
     padding-bottom: 80px;
 }
 
-.input-list__item--style  {
+/* .input-list__item--style  {
     background-color: rgb(40, 40, 40);
     border: none;
     color: rgb(255, 255, 255);
     width: 240px;
-} 
+}  */
 
 .footer {
     background: rgb(153, 132, 49);
     text-align: center;
     min-height: auto;
+    color: rgb(255, 255, 255);
+}
+
+.menu-list__footer {
+    width: 921px;
+    margin: 0 auto;
+}
+
+.menu-list__footer-top-items {
+    list-style: none;
+}
+
+.menu-list__footer-under-items {
+    list-style: none;
 }
