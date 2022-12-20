@@ -264,7 +264,7 @@ body {
     top: 64px;
 }
 
-.forms-input {
+.form-registration {
     margin: 0 auto;
     padding-left: 0;
     width: 520px;
@@ -272,8 +272,7 @@ body {
     list-style: none;
 }
 
-.form-input {
-    flex-basis: 50%;
+.input-content {
     margin-bottom: 40px;
     font-size: 13px;
     font-family: 'Montserrat';
@@ -287,11 +286,11 @@ body {
     width: 520px;
 }
 
-.form-input:nth-child(1) {
+.input-content:nth-child(1) {
     margin-right: 30px;
 }
 
-.forms-input__wrapper{
+.form-registration__user-name{
     display: flex;
 }
 
@@ -314,29 +313,72 @@ body {
     padding-bottom: 80px;
 }
 
-/* .input-list__item--style  {
-    background-color: rgb(40, 40, 40);
-    border: none;
-    color: rgb(255, 255, 255);
-    width: 240px;
-}  */
-
 .footer {
     background: rgb(153, 132, 49);
     text-align: center;
-    min-height: auto;
+    display: flex;
     color: rgb(255, 255, 255);
 }
 
 .menu-list__footer {
-    width: 921px;
-    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 14px;
 }
 
-.menu-list__footer-top-items {
+.menu-list__footer-items {
     list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(255, 255, 255);
+    white-space: nowrap;
 }
 
-.menu-list__footer-under-items {
-    list-style: none;
+.menu-list__footer-items:nth-child(1) {
+    margin-bottom: 0;
+}
+
+.menu-list__footer-items:nth-child(2) {
+    margin-top: 0;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.menu-list__footer-top-item {
+    padding: 19px 30px 20px 30px;
+}
+
+.menu-list__footer-top-item:nth-child(1) {
+    padding-left: 90px;
+}
+
+.menu-list__footer-top-item:nth-child(7) {
+    padding-right: 90px;
+}
+
+.menu-list__footer-under-item {
+    flex-basis: 25%;
+    border-right: 1px solid rgb(255, 255, 255);
+    padding-top: 19px;
+    padding-bottom: 20px;
+}
+
+.menu-list__footer-under-item:nth-child(1) {
+    text-align: left;
+    padding-left: 90px;
+    flex-basis: 30%;
+}
+
+.menu-list__footer-under-item:nth-child(4) {
+    text-align: right;
+    margin-right: 75px;
+    border-right: none;
+}
+
+.footer-icon {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 0px;
 }
