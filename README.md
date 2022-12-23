@@ -1,2 +1,1 @@
-# first_s
-# first_s
+# Учебный проект Wine
