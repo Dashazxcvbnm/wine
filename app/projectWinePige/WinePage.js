@@ -1,10 +1,10 @@
 function form() {
-    const button = document.querySelector('.form__button');
-    button.addEventListener('click', ()=> {
+    const formButton = document.querySelector('.form__button');
+    formButton.addEventListener('click', ()=> {
         const inputName = document.querySelector('.form__input--name');
         const inputPhone = document.querySelector('.form__input--phone');
         const inputAdds = document.querySelector('.form__input--adds')
-
+    
         const { validName, messageName } = validateName(inputName.value);
         const { validPhone, messagePhone } = validatePhone(inputPhone.value);
         const { validAdds, messageAdds } = validateAdds(inputAdds.value);
@@ -27,11 +27,8 @@ function form() {
             inputAdds.setCustomValidity('');
         }  
         if (validName && validPhone && validAdds) {
-            inputName.value = "";
-            inputPhone.value = "";
-            inputAdds.value = "";
-            console.log('Валидная форма');
-            let successModal = document.querySelector('.modal-window');
+            document.querySelector('.form').reset();
+            const successModal = document.querySelector('.modal-window');
             successModal.style.display = 'block';
              setTimeout(()=> {
                 successModal.style.display = 'none'
@@ -45,7 +42,7 @@ function form() {
 }
 
 function validateName(value) {
-    if (value.length  === 0) {
+    if (!value.length) {
         return { validName: false, messageName: 'Заполните поле' }
     }
     if (!(/[А-Я][а-я]+/g.test(value)) || (value.length <= 2)) {
@@ -56,7 +53,7 @@ function validateName(value) {
 
 function validatePhone(value) {
     const globalRegex = new RegExp('^[8][0-9]{10}$');
-    if (value.length  === 0) {
+    if (!value.length) {
         return { validPhone: false, messagePhone: 'Заполните поле' }
     }
     if (!globalRegex.test(value)) {
@@ -66,7 +63,7 @@ function validatePhone(value) {
 }
 
 function validateAdds(value) {
-    if (value.length  === 0) {
+    if (!value.length) {
         return { validAdds: false, messageAdds: 'Заполните поле' }
     }
     return { validAdds: true, messageAdds: '' }
