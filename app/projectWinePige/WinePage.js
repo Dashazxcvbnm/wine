@@ -5,27 +5,10 @@ function form() {
         const inputPhone = document.querySelector('.form__input--phone');
         const inputAdds = document.querySelector('.form__input--adds')
     
-        const { validName, messageName } = validateName(inputName.value);
-        const { validPhone, messagePhone } = validatePhone(inputPhone.value);
-        const { validAdds, messageAdds } = validateAdds(inputAdds.value);
-        if (!validName) {
-            inputName.setCustomValidity(messageName);
-        } 
-        else {
-            inputName.setCustomValidity('');
-        }
-        if(!validPhone) {
-            inputPhone.setCustomValidity(messagePhone);
-        }
-        else {
-            inputPhone.setCustomValidity('');
-        }  
-        if (!validAdds) {
-            inputAdds.setCustomValidity(messageAdds);
-        }
-        else {
-            inputAdds.setCustomValidity('');
-        }  
+        const validName = validateName(inputName);
+        const validPhone = validatePhone(inputPhone);
+        const validAdds = validateAdds(inputAdds);
+
         if (validName && validPhone && validAdds) {
             document.querySelector('.form').reset();
             const successModal = document.querySelector('.modal-window');
@@ -34,39 +17,47 @@ function form() {
                 successModal.style.display = 'none'
              }, 5000)
         }
-        const inputListener = inputName.addEventListener('input', ()=> {
-            inputName.removeEventListener('input', inputListener, false);
-        })
         return
     })
 }
 
-function validateName(value) {
+function validateName(input) {
+    const value = input.value;
     if (!value.length) {
-        return { validName: false, messageName: 'Заполните поле' }
+        input.setCustomValidity('Заполните поле');
+        return false
     }
-    if (!(/[А-Я][а-я]+/g.test(value)) || (value.length <= 2)) {
-        return { validName: false, messageName: 'Имя некорректно' }
+if (!(/[А-Я][а-я]+/g.test(value)) || (value.length <= 2)) {
+        input.setCustomValidity('Имя некорректно');
+        return false
     } 
-    return { validName: true, messageName: '' }
+    input.setCustomValidity('');
+    return true
 }
 
-function validatePhone(value) {
+function validatePhone(input) {
+    const value = input.value;
     const globalRegex = new RegExp('^[8][0-9]{10}$');
     if (!value.length) {
-        return { validPhone: false, messagePhone: 'Заполните поле' }
+        input.setCustomValidity('Заполните поле');
+        return false
     }
     if (!globalRegex.test(value)) {
-        return { validPhone: false, messagePhone: 'Телефон некорректный' }
+        input.setCustomValidity('Телефон некорректный');
+        return false
     } 
-    return { validPhone: true, messagePhone: '' }
+    input.setCustomValidity('');
+    return true
 }
 
-function validateAdds(value) {
+function validateAdds(input) {
+    const value = input.value;
     if (!value.length) {
-        return { validAdds: false, messageAdds: 'Заполните поле' }
+        input.setCustomValidity('Заполните поле');
+        return false
     }
-    return { validAdds: true, messageAdds: '' }
+    input.setCustomValidity('');
+    return true
 }
 
 window.onload = (event) => {
