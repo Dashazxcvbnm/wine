@@ -3,13 +3,26 @@ function form() {
     formButton.addEventListener('click', ()=> {
         const inputName = document.querySelector('.form__input--name');
         const inputPhone = document.querySelector('.form__input--phone');
-        const inputAdds = document.querySelector('.form__input--adds')
-    
+        const inputAdds = document.querySelector('.form__input--adds');
+
+        const arrayValid = [];
+
         const validName = validateName(inputName);
         const validPhone = validatePhone(inputPhone);
         const validAdds = validateAdds(inputAdds);
 
-        if (validName && validPhone && validAdds) {
+        arrayValid.push(validName, validPhone, validAdds);
+
+        const control = arrayValid.every(function(elem) {
+            if (elem === true) {
+                return true;
+        }
+            else {
+                return false;
+        }
+     });
+
+        if (control) {
             document.querySelector('.form').reset();
             const successModal = document.querySelector('.modal-window');
             successModal.style.display = 'block';
@@ -21,17 +34,50 @@ function form() {
     })
 }
 
+function createErrorMessage(errorText, validationBlockName) {
+    let errorMessage = document.querySelector(`.window-error__${validationBlockName}`);
+    if (!errorMessage) {
+        errorMessage = document.createElement('span');
+        errorMessage.classList.add('window-error', `window-error__${validationBlockName}`);
+    } 
+    errorMessage.innerText = errorText;
+    return document.querySelector('.window-error__wrapper').appendChild(errorMessage);
+}
+
+function removeErrorMessage(validationBlockName) {
+    let errorMessage = document.querySelector(`.window-error__${validationBlockName}`);
+    if (!errorMessage) {
+        return
+    }
+    return document.querySelector(`.window-error__${validationBlockName}`).remove(); 
+}
+
+function createNameErrorMessage(errorText) {
+    return createErrorMessage(errorText, 'name')
+}
+
+function createPhoneErrorMessage(errorText) {
+    return createErrorMessage(errorText, 'phone')
+}
+
+function createAddsErrorMessage(errorText) {
+    return createErrorMessage(errorText, 'adds')
+}
+
 function validateName(input) {
     const value = input.value;
     if (!value.length) {
-        input.setCustomValidity('Заполните поле');
+        createNameErrorMessage('Заполните поле');
+        input.classList.add('form__input_invalid');
         return false
     }
-if (!(/[А-Я][а-я]+/g.test(value)) || (value.length <= 2)) {
-        input.setCustomValidity('Имя некорректно');
+    if (!(/[А-Я][а-я]+/g.test(value)) || (value.length <= 2)) {
+        createNameErrorMessage('Имя некорректно');
+        input.classList.add('form__input_invalid');
         return false
     } 
-    input.setCustomValidity('');
+    removeErrorMessage('name')
+    input.classList.remove('form__input_invalid');
     return true
 }
 
@@ -39,24 +85,29 @@ function validatePhone(input) {
     const value = input.value;
     const globalRegex = new RegExp('^[8][0-9]{10}$');
     if (!value.length) {
-        input.setCustomValidity('Заполните поле');
+        createPhoneErrorMessage('Заполните поле');
+        input.classList.add('form__input_invalid');
         return false
     }
     if (!globalRegex.test(value)) {
-        input.setCustomValidity('Телефон некорректный');
+        createPhoneErrorMessage('Телефон некорректный');
+        input.classList.add('form__input_invalid');
         return false
     } 
-    input.setCustomValidity('');
+    removeErrorMessage('phone');
+    input.classList.remove('form__input_invalid');
     return true
 }
 
 function validateAdds(input) {
     const value = input.value;
     if (!value.length) {
-        input.setCustomValidity('Заполните поле');
+        createAddsErrorMessage('Заполните поле');
+        input.classList.add('form__input_invalid');
         return false
-    }
-    input.setCustomValidity('');
+    } 
+    removeErrorMessage('adds');
+    input.classList.remove('form__input_invalid');
     return true
 }
 
