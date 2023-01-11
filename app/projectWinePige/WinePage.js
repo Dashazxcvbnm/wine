@@ -1,10 +1,16 @@
 function form() {
+    const inputName = document.querySelector('.form__input--name');
+    const inputPhone = document.querySelector('.form__input--phone');
+    const inputAdds = document.querySelector('.form__input--adds');
     const formButtonActivation = document.querySelector('.form__button');
-    formButtonActivation.addEventListener('click', ()=> {
-        const inputName = document.querySelector('.form__input--name');
-        const inputPhone = document.querySelector('.form__input--phone');
-        const inputAdds = document.querySelector('.form__input--adds');
 
+    [inputName, inputPhone, inputAdds].forEach((input) => 
+    input.addEventListener('focus', () => {
+        removeErrorMessage(input.id)
+    }
+    ))
+
+    formButtonActivation.addEventListener('click', ()=> {
         const formValidationResults = [];
 
         const checkInputName = validateName(inputName);
@@ -25,6 +31,8 @@ function form() {
         }
         return
     })
+
+
 }
 
 function createErrorMessage(errorText, validationBlockName) {
