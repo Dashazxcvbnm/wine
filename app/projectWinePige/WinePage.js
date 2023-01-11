@@ -1,28 +1,21 @@
 function form() {
-    const formButton = document.querySelector('.form__button');
-    formButton.addEventListener('click', ()=> {
+    const formButtonActivation = document.querySelector('.form__button');
+    formButtonActivation.addEventListener('click', ()=> {
         const inputName = document.querySelector('.form__input--name');
         const inputPhone = document.querySelector('.form__input--phone');
         const inputAdds = document.querySelector('.form__input--adds');
 
-        const arrayValid = [];
+        const formValidationResults = [];
 
-        const validName = validateName(inputName);
-        const validPhone = validatePhone(inputPhone);
-        const validAdds = validateAdds(inputAdds);
+        const checkInputName = validateName(inputName);
+        const checkInputPhone = validatePhone(inputPhone);
+        const checkInputAdds = validateAdds(inputAdds);
 
-        arrayValid.push(validName, validPhone, validAdds);
+        formValidationResults.push(checkInputName, checkInputPhone, checkInputAdds);
 
-        const control = arrayValid.every(function(elem) {
-            if (elem === true) {
-                return true;
-        }
-            else {
-                return false;
-        }
-     });
+        const controlResultsValidation = formValidationResults.every((isResultValid) => !!isResultValid)
 
-        if (control) {
+        if (controlResultsValidation) {
             document.querySelector('.form').reset();
             const successModal = document.querySelector('.modal-window');
             successModal.style.display = 'block';
