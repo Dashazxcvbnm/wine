@@ -314,7 +314,7 @@ body {
     color: rgb(255, 255, 255);
     border-top: none;
     border-right: none;
-    border-bottom: 1px solid rgb(255, 255, 255);;
+    border-bottom: 1px solid rgb(255, 255, 255);
     border-left: none;
     width: 536px;
     outline: none;
@@ -346,6 +346,42 @@ body {
     margin: 0 auto;
     position: relative;
     padding-bottom: 80px;
+}
+
+.form__input_invalid {
+    border-bottom: 1px solid rgb(255, 0, 0);
+}
+
+.form__input_invalid:focus {
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.window-error {
+    position: absolute;
+    display: block;
+    color: rgb(255, 0, 0);
+    font-size: 13px;
+}
+
+.window-error__name {
+    transform: translate(0px, -105px);
+}
+
+.window-error__phone {
+    transform: translate(283px, -105px);
+}
+
+.window-error__adds {
+    transform: translate(0px, -34px);
+}
+
+.modal-window {
+    position:  absolute;
+    width: 250px;
+    height: 50px;
+    background-color: rgb(105, 105, 105);
+    display: none;
+    transform: translate(430px, 0px);
 }
 
 .footer {

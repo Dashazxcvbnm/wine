@@ -2,7 +2,7 @@
 <html>
     <head>
         <link href="./WinePige.css" rel="stylesheet">
-        <script scr="./WinePige.js"></script>
+        <script src="./WinePage.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, height:device-height, initial-scale=1.0">
         <link rel="icon" href="./Image/Favicon.png" type="image/x-icon">
@@ -139,13 +139,17 @@
                 Feugiat enim tortor in hac id imperdiet adipiscing.
                 Pellentesque nisi, mi sit non sit sed fermentum. 
             </div>
-            <form class="form" action="" method="">
-              <div class="form__wrapper">
-                <input class="form__input" type="text" placeholder="Имя">
-                <input class="form__input" type="tel" placeholder="Телефон">
+            <div class="modal-window">
+                <span>Форма отправлена</span>
               </div>
-                <input class="form__input" type="text" placeholder="Бутик на Невском 103">
-                <button class="form__button">записаться</button>
+            <form class="form" action="" method="" onsubmit="return false">
+              <div class="form__wrapper">
+               <input id="name" class="form__input form__input--name" type="text" placeholder="Имя">
+                <input id="phone" class="form__input form__input--phone" type="tel" placeholder="Телефон">
+              </div>
+                <input id="adds" class="form__input form__input--adds" type="text" placeholder="Бутик на Невском 103">
+                <div class="window-error__wrapper"></div>
+                <button class="form__button" type="sumbmit">записаться</button>
             </form>
                 </div>
             </div>
